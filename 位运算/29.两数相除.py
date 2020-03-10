@@ -1,5 +1,5 @@
 #求余数,不能使用乘除和mod
-#这边就是回归数学本质
+#这边就是回归数学本质,把除法拆分成若干减法,并通过倍数的加成加速防止运算时间溢出
 
 class Solution:
     def divide(self, dividend: int, divisor: int) -> int:
