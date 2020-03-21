@@ -33,3 +33,16 @@ class Solution:
             stack.append((remainX,0))
 
         return False
+
+
+
+#方法2,贝祖定律
+#求一对整数,使得ax+by = z,也就是最大公约数
+class Solution:
+    def canMeasureWater(self, x: int, y: int, z: int) -> bool:
+        if x + y < z:
+            return False
+        if x == 0 or y == 0 :
+            return z==0 or x+y == z
+
+        return z % math.gcd(x,y) == 0
